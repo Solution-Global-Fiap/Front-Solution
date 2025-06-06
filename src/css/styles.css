@@ -388,10 +388,14 @@ span {
 
 .section-title {
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   text-align: center;
   color: var(--primary);
   font-family: 'Poppins', sans-serif;
+}
+
+.quiz-section > p {
+  margin-bottom: 30px;
 }
 
 .section-title span {
