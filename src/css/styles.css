@@ -1,0 +1,335 @@
+:root {
+  --bg-dark: #2C3E50;
+  --bg-more-dark: #1c2833;
+  --bg-card:#34495e; 
+  --primary: #3498DB;
+  --white: #fff;
+  --red: #E74C3C;
+  --text: #ecf0f1;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header.hero {
+  padding-top: 80vh;
+  background: url('../images/enchente1.png') center/cover no-repeat;
+  height: 100vh ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-dark);
+  z-index: 1000;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.logo a{
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.logo-cor {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+}
+
+span {
+  color: var(--red);
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  position: relative;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1.0rem;
+  font-weight: bold;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px; 
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary); 
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%; 
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.hero-content {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.card.reverse {
+  flex-direction: row-reverse;
+}
+
+.card img {
+  width: 50%;
+  height: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+.card-text {
+  flex: 1;
+  padding: 30px;
+}
+
+.card-text h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.footer {
+  background: var(--bg-more-dark);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.target-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.target-section h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+.target-cards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.target-card {
+  position: relative;
+  width: 380px;
+  height: 520px;
+  background-color: var(--bg-card);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.target-card.destaque {
+  width: 420px;
+  height: 580px;
+}
+
+.target-card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  height: 78%;
+  background-size: cover;
+  background-position: center;
+  transition: height 0.4s ease;
+}
+
+.card-content {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  transition: color 0.4s ease;
+}
+
+.target-card:hover .card-image {
+  height: 100%;
+}
+
+.target-card:hover .card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  color: var(--white);
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  padding: 30px;
+  font-size: 1.4rem;
+}
+
+.benefits-section {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.benefits-section h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 40px;
+}
+.benefits-grid {
+  display: flex;
+  flex-wrap: wrap;    
+  flex-direction: row;  
+  gap: 30px;           
+  max-width: var(--max-width);
+  justify-content: center; 
+}
+
+
+.benefit-item {
+  background-color: var(--bg-dark);
+  padding: 30px 20px;
+  width: 250px;
+  height: 350px;
+  border-radius: 12px;  
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+  background-color: #3b536a;
+}
+
+.benefit-item .emoji {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.benefit-item h4 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.benefit-item p {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.daily-section {
+  max-width: var(--max-width);
+  margin: 0 auto 80px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.daily-section h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.daily-list {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.daily-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 3px;
+  height: 100%;
+  background: var(--primary);
+  opacity: 0.2;
+  border-radius: 2px;
+}
+
+.daily-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.icon {
+  font-size: 2rem;
+  color: var(--primary);
+  z-index: 1000;
+  margin-top: 3px;
+}
+
