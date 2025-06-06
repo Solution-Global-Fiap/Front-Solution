@@ -20,6 +20,7 @@
         <li><a href="#publico">Público-alvo</a></li>
         <li><a href="#beneficios">Benefícios</a></li>
         <li><a href="#cotidiano">No Dia a Dia</a></li>
+        <li><a href="#quiz">Quiz</a></li>
       </ul>
     </nav>
     <div class="hero-content">
@@ -124,31 +125,108 @@
       </ul>
     </section>
     <section id="quiz" class="quiz-section">
-      <div id="quiz-start" class="quiz-start">
-        <h2>Venha participar do nosso Quiz!</h2>
-        <form id="start-form">
-          <input type="text" placeholder="Nome" required />
-          <input type="number" placeholder="Idade" required />
-          <input type="email" placeholder="Email" required />
-          <button type="submit">Começar Quiz</button>
-        </form>
-      </div>
+      <h2 class="section-title"><span>Venha participar</span> do nosso quiz!</h2>
 
-      <div id="quiz-container" class="quiz-container hidden">
-        <div id="question-container">
-          <p id="question-text"></p>
-          <div id="answers"></div>
+      <div class="quiz-card">
+        <form id="initial-form">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" required>
+
+          <label for="age">Idade:</label>
+          <input type="number" id="age" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" required>
+
+          <button id="start-quiz" type="button" class="btn-start">Começar Quiz</button>
+        </form>
+
+        <form id="quiz-form" style="display: none;">
+          <div class="question-card">
+            <p>1. Qual é o principal objetivo do projeto AlertaBairro?</p>
+            <label><input type="radio" name="q1" value="a"> Melhorar a pavimentação urbana</label>
+            <label><input type="radio" name="q1" value="b"> Monitorar enchentes e proteger comunidades</label>
+            <label><input type="radio" name="q1" value="c"> Reduzir o consumo de energia</label>
+          </div>
+
+          <div class="question-card">
+            <p>2. Quais dados o AlertaBairro utiliza para emitir alertas?</p>
+            <label><input type="radio" name="q2" value="a"> Informações de redes sociais</label>
+            <label><input type="radio" name="q2" value="b"> Sensores de nível de água e chuva</label>
+            <label><input type="radio" name="q2" value="c"> Sinais de satélite</label>
+          </div>
+
+          <div class="question-card">
+            <p>3. Qual tecnologia pode ser usada para avisar moradores em tempo real?</p>
+            <label><input type="radio" name="q3" value="a"> Cartas enviadas pelos correios</label>
+            <label><input type="radio" name="q3" value="b"> Alto-falantes comunitários e notificações por app</label>
+            <label><input type="radio" name="q3" value="c"> Anúncios em jornais</label>
+          </div>
+
+          <div class="question-card">
+            <p>4. Quais são os maiores riscos das enchentes?</p>
+            <label><input type="radio" name="q4" value="a"> Danos materiais, doenças e perda de vidas</label>
+            <label><input type="radio" name="q4" value="b"> Queda de energia elétrica</label>
+            <label><input type="radio" name="q4" value="c"> Congestionamentos no trânsito</label>
+          </div>
+
+          <div class="question-card">
+            <p>5. Onde o sistema AlertaBairro é mais útil?</p>
+            <label><input type="radio" name="q5" value="a"> Regiões planas e secas</label>
+            <label><input type="radio" name="q5" value="b"> Comunidades próximas a rios ou áreas de risco</label>
+            <label><input type="radio" name="q5" value="c"> Bairros de alto padrão</label>
+          </div>
+
+          <div class="question-card">
+            <p>6. Como o AlertaBairro ajuda a salvar vidas?</p>
+            <label><input type="radio" name="q6" value="a"> Criando pontes novas</label>
+            <label><input type="radio" name="q6" value="b"> Enviando alertas e orientando evacuação</label>
+            <label><input type="radio" name="q6" value="c"> Diminuindo o volume dos rios</label>
+          </div>
+
+          <div class="question-card">
+            <p>7. Por que é importante ter um sistema comunitário de alerta?</p>
+            <label><input type="radio" name="q7" value="a"> Para promover eventos culturais</label>
+            <label><input type="radio" name="q7" value="b"> Para fortalecer a comunicação local em emergências</label>
+            <label><input type="radio" name="q7" value="c"> Para fiscalizar os comércios do bairro</label>
+          </div>
+
+          <div class="question-card">
+            <p>8. Qual é uma medida preventiva contra enchentes?</p>
+            <label><input type="radio" name="q8" value="a"> Jogar lixo nos rios</label>
+            <label><input type="radio" name="q8" value="b"> Construir casas em áreas de risco</label>
+            <label><input type="radio" name="q8" value="c"> Manter bueiros limpos e usar sensores de monitoramento</label>
+          </div>
+
+          <div class="question-card">
+            <p>9. O que o AlertaBairro promove além da tecnologia?</p>
+            <label><input type="radio" name="q9" value="a"> Participação comunitária e educação sobre riscos</label>
+            <label><input type="radio" name="q9" value="b"> Cursos de gastronomia</label>
+            <label><input type="radio" name="q9" value="c"> Venda de equipamentos de segurança</label>
+          </div>
+
+          <div class="question-card">
+            <p>10. Como a tecnologia pode transformar comunidades vulneráveis?</p>
+            <label><input type="radio" name="q10" value="a"> Aumentando a exposição ao risco</label>
+            <label><input type="radio" name="q10" value="b"> Ignorando as necessidades locais</label>
+            <label><input type="radio" name="q10" value="c"> Dando acesso a alertas, prevenção e segurança</label>
+          </div>
+
+          <button type="submit" class="btn-submit">Enviar Respostas</button>
+        </form>
+        <div class="quiz-result" id="quizResult">
+          <p>Parabéns, <span id="userNameResult"></span> Você completou o quiz.</p>
+          <p>Seu resultado foi: <strong id="score"></strong> de 10</p>
+          <p>Os resultados foram enviados para o seu Email: <span id="userEmailResult"></span></p>
         </div>
-        <button id="next-btn" class="hidden">Próxima</button>
-        <div id="result" class="hidden"></div>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
     <p>&copy; 2025 <strong class="logo-cor"><span>Alerta</span>Bairro</strong> - Todos os direitos reservados.</p>
   </footer>
-  <script src="src/js/script.js"></script>
+  <script src="src/js/slideShow.js"></script>
+  <script src="src/js/quiz.js"></script>
 </body>
 </html>
