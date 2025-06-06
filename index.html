@@ -123,6 +123,27 @@
         </li>
       </ul>
     </section>
+    <section id="quiz" class="quiz-section">
+      <div id="quiz-start" class="quiz-start">
+        <h2>Venha participar do nosso Quiz!</h2>
+        <form id="start-form">
+          <input type="text" placeholder="Nome" required />
+          <input type="number" placeholder="Idade" required />
+          <input type="email" placeholder="Email" required />
+          <button type="submit">Começar Quiz</button>
+        </form>
+      </div>
+
+      <div id="quiz-container" class="quiz-container hidden">
+        <div id="question-container">
+          <p id="question-text"></p>
+          <div id="answers"></div>
+        </div>
+        <button id="next-btn" class="hidden">Próxima</button>
+        <div id="result" class="hidden"></div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
