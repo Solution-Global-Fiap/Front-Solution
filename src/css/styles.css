@@ -9,6 +9,46 @@
   --max-width: 1200px;
 }
 
+body.theme-light {
+  --bg-dark: #f4f4f4;
+  --bg-more-dark: #e0e0e0;
+  --bg-card: #ffffff;
+  --primary: #2d89ef;
+  --red: #c62828;
+  --text: #2c3e50;
+}
+
+body.theme-green {
+  --bg-dark: #1e3d32;
+  --bg-more-dark: #102920;
+  --bg-card: #2f6650;
+  --primary: #52b788;
+  --red: #d00000;
+  --text: #e6f2e9;
+}
+
+.theme-switcher {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: var(--bg-more-dark);
+  border-radius: 80px;
+  padding: 5px;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary);
+  transition: transform 0.2s ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.2);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -261,7 +301,7 @@ span {
 
 .benefit-item:hover {
   transform: translateY(-5px);
-  background-color: #3b536a;
+  background-color: var(--bg-card);
 }
 
 .benefit-item .emoji {

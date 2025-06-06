@@ -12,6 +12,7 @@ const emailSpan = document.getElementById('userEmailResult')
 let nome = undefined;
 let idade = undefined;
 let email = undefined;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 startButton.addEventListener('click', function (event) {
   event.preventDefault(); 
@@ -20,9 +21,16 @@ startButton.addEventListener('click', function (event) {
   idade = document.getElementById('age').value.trim();
   email = document.getElementById('email').value.trim();
 
+  
+
   if (!nome || !idade || !email) {
     alert('Por favor, preencha todos os campos antes de iniciar o quiz.');
     return;
+  }
+
+  if(!emailRegex.test(email)){
+    alert("Por favor, digite um email válido")
+    return
   }
 
   initialForm.style.display = 'none';
