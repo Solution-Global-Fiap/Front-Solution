@@ -27,7 +27,7 @@ body.theme-green {
   --text: #e6f2e9;
 }
 
-.theme-switcher {
+.mobile-theme-switcher {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -111,6 +111,7 @@ span {
 
 .nav-links {
   display: flex;
+  align-items: center;
   list-style-type: none;
   gap: 2rem;
 }
@@ -489,4 +490,116 @@ span {
 #userNameResult, #userEmailResult{
   color: var(--primary);
   font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bg-dark);
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid var(--primary);
+  }
+
+  .nav-links.active {
+    display: flex;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card.reverse {
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .target-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .target-card,
+  .target-card.destaque {
+    width: 90%;
+    height: auto;
+  }
+
+  .benefits-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit-item {
+    width: 90%;
+    height: auto;
+  }
+
+  .quiz-card {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .daily-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header.hero{
+    padding-top: 60vh;
+  }
+
+  .hero-content h2{
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+
+  .theme-switcher {
+    display: none;
+  }
+
+  .mobile-theme-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .mobile-theme-switcher .theme-btn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+  }
+
 }
