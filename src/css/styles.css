@@ -42,7 +42,7 @@ header.hero {
   left: 0;
   width: 100%;
   background-color: var(--bg-dark);
-  z-index: 1000;
+  z-index: 1001;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -333,3 +333,116 @@ span {
   margin-top: 3px;
 }
 
+.quiz-section {
+  padding: 0px 20px;
+  background-color: var(--bg-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title span {
+  color: var(--red);
+}
+
+.quiz-card {
+  color: var(--bg-more-dark);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 800px;
+}
+
+.quiz-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quiz-card label {
+  display: block;
+  margin-top: 8px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.quiz-card input[type="text"],
+.quiz-card input[type="number"],
+.quiz-card input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--white);
+  width: 100%;
+}
+
+.question-card {
+  background-color: var(--white);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.question-card p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.question-card label {
+  display: block;
+  margin: 6px 0;
+  color: inherit;
+}
+
+.btn-start,
+.btn-submit {
+  background-color: var(--primary);
+  color: var(--white);
+  width: 100%;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-start:hover,
+.btn-submit:hover {
+  background-color: var(--primary);
+}
+
+.quiz-result {
+  background-color: var(--bg-card);
+  color: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  text-align: center;
+  font-size: 1.2rem;
+  display: none;
+}
+
+.quiz-result.active {
+  display: block;
+}
+
+#userNameResult, #userEmailResult{
+  color: var(--primary);
+  font-weight: bold;
+}
