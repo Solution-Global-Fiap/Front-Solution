@@ -13,7 +13,8 @@
       <h1 class="logo logo-cor">
         <a href="#"><span>Alerta</span>Bairro</a>
       </h1>
-      <ul class="nav-links">
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#problema">Problema</a></li>
         <li><a href="#tecnologias">Tecnologias</a></li>
         <li><a href="#objetivos">Objetivos</a></li>
@@ -21,13 +22,12 @@
         <li><a href="#beneficios">Benefícios</a></li>
         <li><a href="#cotidiano">No Dia a Dia</a></li>
         <li><a href="#quiz">Quiz</a></li>
+        <li class="mobile-theme-switcher">
+          <button class="theme-btn" data-theme="default" title="Tema padrão">💧</button>
+          <button class="theme-btn" data-theme="green" title="Tema verde">🌿</button>
+          <button class="theme-btn" data-theme="light" title="Tema claro">☀️</button>
+        </li>
       </ul>
-      <div class="theme-switcher">
-        <button class="theme-btn" data-theme="default" title="Tema padrão">💧</button>
-        <button class="theme-btn" data-theme="green" title="Tema verde">🌿</button>
-        <button class="theme-btn" data-theme="light" title="Tema claro">☀️</button>
-      </div>
-
     </nav>
     <div class="hero-content">
       <h2>Evitando Desastres com Tecnologia de ponta</h2>
@@ -235,5 +235,21 @@
   <script src="src/js/slideShow.js"></script>
   <script src="src/js/quiz.js"></script>
   <script src="src/js/themeSwitcher.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    const navItems = navLinks.querySelectorAll('a');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    navItems.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+
 </body>
 </html>
