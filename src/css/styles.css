@@ -444,12 +444,13 @@ span {
 .question-card p {
   font-weight: bold;
   margin-bottom: 10px;
+  color: #000;
 }
 
 .question-card label {
   display: block;
   margin: 6px 0;
-  color: inherit;
+  color: #000;
 }
 
 .btn-start,
@@ -602,4 +603,7 @@ span {
     color: var(--primary);
   }
 
+  .daily-list::before {
+    width: 0px;
+  }
 }
